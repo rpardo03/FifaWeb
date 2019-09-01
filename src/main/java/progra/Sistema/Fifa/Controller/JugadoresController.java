@@ -10,6 +10,7 @@ import progra.Sistema.Fifa.Services.ManejoDato;
 import java.util.ArrayList;
 
 @Controller
+@RequestMapping()
 public class JugadoresController {
 
 	@RequestMapping("/index")
