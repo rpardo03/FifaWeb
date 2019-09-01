@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <header>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </header>
+    <meta charset="UTF-8">
+    <title th:text="${titulo}"> </title>
+</head>
+<body>
+<div class="container">
+    <h2>Lista jugadores</h2>
+
+    <table class="table table-striped">
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Fotografia</th>
+            <th>Nacionalidad</th>
+            <th>Club</th>
+
+        </tr>
+        <tr th:each="Jugador: ${jugadores}">
+            <td th:text="${jugador.getNombre()}" />
+            <td th:text="${jugador.getEdad()}" />
+            <td><img th:src="${jugador.getFotografia()}"></td>
+            <td th:text="${jugador.getNacionalidad()}" />
+            <td th:text="${jugador.getClub()}" />
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
