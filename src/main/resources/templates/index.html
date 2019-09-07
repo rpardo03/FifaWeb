@@ -16,23 +16,27 @@
 
     <table class="table table-striped">
         <tr>
+            <th>Fotografia</th>
             <th>Nombre</th>
             <th>Edad</th>
-            <th>Fotografia</th>
+            <th>Potencial</th>
             <th>Nacionalidad</th>
             <th>Club</th>
+            <th>Rating</th>
 
         </tr>
         <tr th:each="jugador: ${jugadores}">
-            <td th:text="${jugador.nombre}"></td>
-            <td th:text="${jugador.edad}"></td>
             <td>
                 <p>
                     <img th:src="${jugador.fotografia}">
                 </p>
             </td>
+            <td th:text="${jugador.nombre}"></td>
+            <td th:text="${jugador.edad}"></td>
+            <td th:text="${jugador.Potencial}"></td>
             <td th:text="${jugador.nacionalidad}"></td>
             <td th:text="${jugador.club}"></td>
+            <td th:text="${jugador.Rating}"></td>
         </tr>
     </table>
 </div>

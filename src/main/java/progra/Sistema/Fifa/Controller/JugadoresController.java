@@ -21,6 +21,7 @@ public class JugadoresController {
 		return "index";
 	}
 
+
 	public String listarJugadores(Model modelo) {
 		// TODO - implement JugadoresController.listarJugadores
 		throw new UnsupportedOperationException();

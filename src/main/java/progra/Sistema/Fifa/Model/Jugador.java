@@ -17,9 +17,9 @@ public class Jugador {
 	public Jugador() {
 	}
 
+	@Override
 	public String toString() {
-		// TODO - implement Jugador.toString
-		throw new UnsupportedOperationException();
+		return "Nombre: "+nombre+" Fotografía: "+fotografia+" Edad: "+edad+" Nacionalidad: "+nacionalidad+" Club:"+club;
 	}
 
 	public String getFotografia() {

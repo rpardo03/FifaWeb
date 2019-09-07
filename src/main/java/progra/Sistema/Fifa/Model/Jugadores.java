@@ -6,8 +6,8 @@ public class Jugadores {
 
     private ArrayList<Jugador> jugadores;
 
-    public Jugadores(ArrayList<Jugador> jugadores) {
-        jugadores = new ArrayList<Jugador>();
+    public Jugadores(ArrayList<Jugador> jugadorees) {
+        this.jugadores = jugadorees;
     }
 
     public ArrayList<Jugador> getJugadores() {
