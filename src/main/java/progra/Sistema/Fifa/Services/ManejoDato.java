@@ -10,10 +10,10 @@ import java.util.ArrayList;
 
 public class ManejoDato {
 
-    public ArrayList<Jugador> leerDatos(String path) {
+    public ListaJugador<Jugador> leerDatos(String path) {
         String lineaTexto;
         File archivo = new File(path);
-        ArrayList<Jugador> jugadoresArchivos = new ArrayList<Jugador>();
+        ListaJugador<Jugador> jugadoresArchivos = new ListaJugador<>();
         try {
             FileReader fReader = new FileReader(archivo);
             BufferedReader bufferedReader = new BufferedReader(fReader);
@@ -34,7 +34,7 @@ public class ManejoDato {
                     j.setVelocidad(Integer.parseInt(datosJugador[66]));
                     j.setAgilidad(Integer.parseInt(datosJugador[67]));
                     j.setResistencia(Integer.parseInt(datosJugador[72]));
-                    jugadoresArchivos.add(j);
+                    jugadoresArchivos.agregarJugador(j);
                 }
             }
             bufferedReader.close();

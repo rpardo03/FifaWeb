@@ -4,18 +4,17 @@ import java.util.*;
 
 public class Jugadores {
 
-    private ArrayList<Jugador> jugadores;
+    private ListaJugador<Jugador> jugadores;
 
-    public Jugadores(ArrayList<Jugador> jugadorees) {
+    public Jugadores(ListaJugador<Jugador> jugadorees) {
         this.jugadores = jugadorees;
     }
 
-    public ArrayList<Jugador> getJugadores() {
-        return this.jugadores;
+    public ListaJugador<Jugador> getJugadores() {
+        return jugadores;
     }
 
-    public void setJugadores(ArrayList<Jugador> Ljugadores) {
-        this.jugadores = Ljugadores;
+    public void setJugadores(ListaJugador<Jugador> jugadores) {
+        this.jugadores = jugadores;
     }
-
 }

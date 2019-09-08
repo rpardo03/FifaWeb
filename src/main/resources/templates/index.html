@@ -8,7 +8,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     </header>
     <meta charset="UTF-8">
-    <title th:text="${titulo}"> </title>
+    <title th:text="${titulo}"></title>
 </head>
 <body>
 <div class="container">
@@ -25,18 +25,18 @@
             <th>Rating</th>
 
         </tr>
-        <tr th:each="jugador: ${jugadores}">
+        <tr th:each="Object: ${jugadores}">
             <td>
                 <p>
-                    <img th:src="${jugador.fotografia}">
+                    <img th:src="${Object.fotografia}">
                 </p>
             </td>
-            <td th:text="${jugador.nombre}"></td>
-            <td th:text="${jugador.edad}"></td>
-            <td th:text="${jugador.Potencial}"></td>
-            <td th:text="${jugador.nacionalidad}"></td>
-            <td th:text="${jugador.club}"></td>
-            <td th:text="${jugador.Rating}"></td>
+            <td th:text="${Object.nombre}"></td>
+            <td th:text="${Object.edad}"></td>
+            <td th:text="${Object.Potencial}"></td>
+            <td th:text="${Object.nacionalidad}"></td>
+            <td th:text="${Object.club}"></td>
+            <td th:text="${Object.Rating}"></td>
         </tr>
     </table>
 </div>
