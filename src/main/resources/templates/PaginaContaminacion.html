@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name='description' content='Contaminación Araucanía'>
+    <meta name='keywords'
+        content='Contaminación Araucanía, Contaminación,concentración contaminación,PM10,PM2.5,Araucanía'>
+    <title>Contaminación Araucanía</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        .panelImagen {
+            position: relative;
+            text-align: center;
+        }
+
+        .textoEspecificaciones {
+            position: absolute;
+            top: 0%;
+            left: 20%;
+            color: aliceblue;
+
+        }
+
+        .select-css {
+            display: block;
+            font-size: 16px;
+            font-family: 'Arial',
+                sans-serif;
+            font-weight: 400;
+            color: #444;
+            line-height: 1.3;
+            padding: .4em 1.4em .3em .8em;
+            width: 400px;
+            max-width: 100%;
+            box-sizing: border-box;
+            margin: 0;
+            border: 1px solid #aaa;
+            box-shadow: 0 1px 0 1px rgba(0, 0, 0, .03);
+            border-radius: .3em;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            appearance: none;
+            background-color: #fff;
+            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+                linear-gradient(to bottom, #ffffff 0%, #f7f7f7 100%);
+            background-repeat: no-repeat,
+                repeat;
+            background-position: right .7em top 50%,
+                0 0;
+            background-size: .65em auto,
+                100%;
+        }
+
+        .select-css::-ms-expand {
+            display: none;
+        }
+
+        .select-css:hover {
+            border-color: #888;
+        }
+
+        .select-css:focus {
+            border-color: #aaa;
+            box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+            box-shadow: 0 0 0 3px -moz-mac-focusring;
+            color: #222;
+            outline: none;
+        }
+
+        .select-css option {
+            font-weight: normal;
+        }
+
+        .button {
+            background: #222;
+            color: #f7f7f7;
+            display: inline-block;
+            height: 50%;
+            width: 10%;
+            margin: 30px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div align="center" id="panelTitulo">
+        <header>
+            <hgroup>
+                <h1>Contaminación Araucanía</h1>
+                <h2>Proyecto Smart City in a Box</h2>
+            </hgroup>
+        </header>
+    </div>
+
+    <div align="right" id="panelNavegacion">
+        <nav>
+            <ul>
+                <li style="display: inline-block;margin:10px;">Página Principal</li>
+                <li style="display: inline-block;margin:10px;">Anexos</li>
+                <li style="display: inline-block;margin:10px;">Proyecto Smart City in a Box</li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="panelImagen" id="panelEspecificacionesProyecto">
+        <article>
+            <figure>
+                <img src="contaminacion.jpg" width="1100">
+            </figure>
+            <div class="textoEspecificaciones">
+                <p>
+                    Especificaciones de la página web y proyecto Smart City in a Box
+                </p>
+            </div>
+        </article>
+    </div>
+
+    <div id="panelSeleccionesDatos">
+        <section>
+            <header align="center">
+                <h4>Filtracion de datos </h4>
+            </header>
+            <div align="center">
+                <h5>Seleccione el rango de tiempo en el que quiere generar el gráfico:</h5>
+                <select class="select-css" name="FranjaHoraria">
+                    <option>Hora</option>
+                    <option>Día</option>
+                    <option>Semana</option>
+                    <option>Mes</option>
+                    <option>Año</option>
+                </select>
+            </div>
+
+            <div align="center">
+                <h4>Seleccione los siguientes campos:</h4>
+                <div>
+                    <h5>Seleccione el Año:</h5>
+                    <select class="select-css" name="SeleccionAnio">
+                        <option>2019</option>
+                    </select>
+                </div>
+                <div>
+                    <h5>Seleccione el Mes:</h5>
+                    <select class=" select-css" name="SeleccionMes">
+                        <option>Abril</option>
+                        <option>Mayo</option>
+                        <option>Junio</option>
+                        <option>Julio</option>
+                        <option>Agosto</option>
+                    </select>
+                </div>
+                <div>
+                    <h5>Seleccione el Día:</h5>
+                    <select class="select-css" name="SeleccionDia">
+                        <option>01</option>
+                        <option>02</option>
+                        <option>03</option>
+                        <option>04</option>
+                        <option>05</option>
+                    </select>
+                </div>
+                <a class="button" value="botonFiltrar" href="/index">Filtrar</a>
+            </div>
+
+
+        </section>
+    </div>
+
+    <footer>
+        <ul>
+            <li><Strong>Quiénes Somos?</Strong></li>
+            <li>Autores:Rodrigo Pardo, Gilio Linfati y Jhonatan Lizama</li>
+            <li>Universidad de la Frontera</li>
+            <li>Departamento de computación e informática</li>
+        </ul>
+    </footer>
+</body>
+
+
+</html>

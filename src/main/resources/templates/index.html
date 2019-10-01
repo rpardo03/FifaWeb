@@ -12,31 +12,27 @@
 </head>
 <body>
 <div class="container">
-    <h2>Lista jugadores</h2>
+    <h2>Lista registros</h2>
 
     <table class="table table-striped">
         <tr>
-            <th>Fotografia</th>
-            <th>Nombre</th>
-            <th>Edad</th>
-            <th>Potencial</th>
-            <th>Nacionalidad</th>
-            <th>Club</th>
-            <th>Rating</th>
+            <th>Sector</th>
+            <th>Dispositivo</th>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>PM10</th>
+            <th>PM2.5</th>
+            <th>Temperatura</th>
 
         </tr>
-        <tr th:each="Object: ${jugadores}">
-            <td>
-                <p>
-                    <img th:src="${Object.fotografia}">
-                </p>
-            </td>
-            <td th:text="${Object.nombre}"></td>
-            <td th:text="${Object.edad}"></td>
-            <td th:text="${Object.Potencial}"></td>
-            <td th:text="${Object.nacionalidad}"></td>
-            <td th:text="${Object.club}"></td>
-            <td th:text="${Object.Rating}"></td>
+        <tr th:each="Registro: ${registros}">
+            <td th:text="${Registro.sector}"></td>
+            <td th:text="${Registro.dispositivo}"></td>
+            <td th:text="${Registro.fecha}"></td>
+            <td th:text="${Registro.hora}"></td>
+            <td th:text="${Registro.pm10}"></td>
+            <td th:text="${Registro.pm25}"></td>
+            <td th:text="${Registro.temperatura}"></td>
         </tr>
     </table>
 </div>
